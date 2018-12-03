@@ -2,7 +2,7 @@
 
 #define PI 3.14159
 
-float process (float radius)  /*function prototype to move out the main process into a new function */
+float process (float radius);  /*function prototype to move out the main process into a new function */
 
 main()
 {
