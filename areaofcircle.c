@@ -9,7 +9,15 @@ main()
 	float radius, area;
 	printf("Radius = ? ");
 	scanf("%f", &radius);
-	area = process(radius);
+	
+	if(radius < 0)
+	{
+		area = 0;
+	}
+	else
+	{
+		area = process(radius);
+	}
 	printf("Area = %f", area);
 }
 
