@@ -7,18 +7,21 @@ float process (float radius);  /*function prototype to move out the main process
 main()
 {
 	float radius, area;
-	printf("Radius = ? ");
-	scanf("%f", &radius);
+	int count, n;
+	printf("How many circles? "); 
+	scanf("%d", &n);
 	
-	if(radius < 0)
-	{
-		area = 0;
+	for(count = 1; count <=n; count++){
+		
+		printf("\nCircle no. %d: Radius = ? ", count);
+		scanf("%f", &radius);
+		if(radius < 0)
+			area = 0;
+		else
+			area = process(radius);
+		printf("Area = %f\n", area);
 	}
-	else
-	{
-		area = process(radius);
-	}
-	printf("Area = %f", area);
+	
 }
 
 /*accepts a floating point as an argument
